@@ -1,0 +1,85 @@
+\documentclass[
+	10pt,
+	parskip=half-,		
+	paper=a4,			
+	english, portuguese		
+	]{scrartcl}			
+	
+\textheight = 220mm		
+\footskip = 2cm		
+\usepackage[portuguese]{babel}
+% \usepackage[cm-default]{fontspec}
+
+\usepackage{xunicode}
+\usepackage{xltxtra}
+
+
+
+\usepackage{microtype}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\usepackage{listings}	
+
+\usepackage[cmyk]{xcolor}	
+ \definecolor{middlegray}{rgb}{0.5,0.5,0.5}
+ \definecolor{lightgray}{rgb}{0.8,0.8,0.8}
+ \definecolor{orange}{rgb}{0.8,0.3,0.3}
+ \definecolor{yac}{rgb}{0.6,0.6,0.1}
+
+% Syntaxhighlighting
+\lstset{
+   basicstyle=\scriptsize\ttfamily,
+   keywordstyle=\bfseries\ttfamily\color{orange},
+   stringstyle=\color{green}\ttfamily,
+   commentstyle=\color{middlegray}\ttfamily,
+   emph={square}, 
+   emphstyle=\color{blue}\texttt,
+   emph={[2]root,base},
+   emphstyle={[2]\color{yac}\texttt},
+   showstringspaces=false,
+   flexiblecolumns=false,
+   tabsize=2,
+   numbers=left,
+   numberstyle=\tiny,
+   numberblanklines=false,
+   stepnumber=1,
+   numbersep=10pt,
+   xleftmargin=15pt
+}
+
+\usepackage{paralist}
+
+\title{Prova MAC0459 - 2021}
+\author{\textbf{Professor}: Roberto Hirata\\%
+        \textbf{Aluno}: Daniel Angelo Esteves Lawand \textbf{NUSP}: 10297693}
+
+\date{14.\,01.\,2022}
+
+% --------------------------------------
+
+\begin{document}
+\maketitle			
+% \newpage	
+% \tableofcontents		
+% \newpage				
+
+\section{Questão 1}
+    \subsection{Task 2}
+        \subsubsection{Descrição do dataset}
+        Tomando o conjunto de dados de acidentes aéreos no Brasil, utilizaremos as planilhas "ocorrencia.csv" e "ocorrencia\_tipo.csv" para responder as perguntas previamente estabelecidas. A planilha "ocorrencia.csv" aponta diversos dados sobre as ocorrências aéreas, porém usaremos apenas a data e a localização da ocorrência. A planilha "ocorrencia\_tipo.csv" é uma planilha mais enxuta, porém possui dados descritivos sobre o tipo de ocorrência, e estes dados são os que usaremos na nossa análise.
+    
+        \subsubsection{Estratégia}
+        A ideia é popular a base de dados, e depois fazer queries que retornem as informações que buscamos. Para isso, iremos construir dois dataframes com pandas, cada qual correspondendo a uma das tabelas que usaremos. Introduziremos duas novas colunas no dataframe df\_ocorrencias, uma indicando o mês e a outra o ano da ocorrência. Após isso, iremos fazer os comandos que criarão os "nodes" no Neo4j. Tendo os comandos, iremos enviar ao Neo4j, para realizar de fato a criação dos "nodes".
+        
+        Cada "node" do tipo "ocorrencia" terá como atributos o ano, o mês, a UF e a cidade da ocorrência aérea; e cada node "ocorrencia\_tipo" terá o tipo de ocorrência como atributo. Após ter criado todos os nós, iremos fazer as queries, que basicamente seguem o mesmo padrão entre si, pois são queries que retornam a quantidade de "nodes" de acordo com cada atributo.
+
+    \subsection{Task 3}
+    Podemos perceber algumas diferenças entre a abordagem de EDA e de Neo4j. A primeira diferença é a configuração de setup, as ferramentas de EDA são mais simples de serem configuradas e portanto demandam menos tempo de configuração, enquanto as ferramentas de Neo4j exigem um pouco mais de quem está manuseando. Outra diferença a ser ressaltada é a maior iteratividade que a ferramenta de Notebook fornece à abordagem de EDA, podendo executar, ver o resultado e possivelmente alterar o código com maior facilidade. Por outro lado, Neo4j oferece uma iteratividade similar, após a construção e o populamento do banco de dados é possível fazer queries com certa facilidade.
+    
+    Outra diferença técnica, para EDA é necessário aprender uma linguagem de programação amplamente usada que é o python, enquanto para Neo4j é necessário aprender uma linguagem que se conecte com o banco de dados - python por exemplo - e é necessário aprender a linguagem Cypher para fazer as queries, e esta linguagem não é amplamente usada.
+    
+    Além das diferenças técnicas, EDA aborda de forma mais simples, mas eficiente para os nossos problemas, já Neo4j é um banco de dados orientado a grafos capaz de lidar com muitos dados altamente conectados, é uma ferramente muito potente, mas que para a realidade que trabalhamos nessa atividade não era de extrema necessidade.
+\end{document}

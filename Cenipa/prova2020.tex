@@ -1,0 +1,173 @@
+\documentclass[12pt]{article}
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{boxedminipage}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage[pdftex]{graphicx}
+\usepackage{float}
+\usepackage{geometry}
+\geometry{hmargin=1cm,vmargin=1cm}
+\usepackage[obeyspaces]{url}
+
+\setlength{\paperheight}{29.7cm}
+\setlength{\footskip}{1.0cm}
+\setlength{\textheight}{25.0cm}
+\setlength{\textwidth}{16.0cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\topmargin}{0.0cm}
+\setlength{\headsep}{3.0cm}
+\pagestyle{fancy}
+
+\chead{
+\noindent\begin{minipage}{0.2\textwidth}
+\includegraphics[height=2.5cm]{arch.pdf}
+\end{minipage}
+\begin{minipage}{0.7\textwidth}
+\centering
+{\sf {\Large Instituto de Matemática e Estatística - USP}}
+\end{minipage}
+}
+
+\cfoot{\footnotesize Rua do Matão, 1010 - São Paulo - SP}
+
+\begin{document}
+
+\begin{center}
+{\sf {\large \bf{MAC0459/MAC5865 - Data and Engineering Science}}
+
+General Test  - 12/2020 - Partially based on Skiena's ``The Data Science
+Design Manual'' book.
+}
+\end{center}
+
+\begin{minipage}{0.8\textwidth}
+\noindent \textbf{By uploding this test I declare that I have worked
+  on it alone and I know that I can be failed in the discipline if I
+  break this circle of confidence.}  
+\begin{flushright}
+Good luck !
+\end{flushright}
+\end{minipage}
+%\newpage
+%\thispagestyle{empty}
+%\setlength{\topmargin}{-3.0cm}
+%\setlength{\headsep}{0.0cm}
+\vspace{2.0cm}
+\begin{itemize}
+\item[{\bf Q1.[NB+pdf]}] This site bellow has data on flights and flights' operations in Brazil. 
+
+  \url{https://www.anac.gov.br/dadosabertos/areas-de-atuacao/voos-e-operacoes-aereas}
+
+    Your task in this question is to check the dataset bellow and formulate three questions to the dataset and
+    answer them using EDA methods and visualizations.
+
+    \url{https://www.anac.gov.br/dadosabertos/areas-de-atuacao/voos-e-operacoes-aereas/dados-estatisticos-do-transporte-aereo}
+
+ The expected answer is to be given in a notebook begining with a brief
+ description of the dataset and your strategy to answer your questions.
+%
+\textbf{If you want/need}, you can enrich your questions and answers with another one of the datasets:
+  \begin{itemize}
+  \item Domestic flights' fares.
+  \item Percentage of delays and cancellations.
+  \end{itemize}
+%
+
+\item[{\bf Q2.[NB+pdf]}] Train and fine-tune a Decision Tree and a Random Forest for one of the datasets you worked in group during practice classes.
+  In your notebook, present the dataset, the supervised machine learning problem, the models, compare the results and write a small conclusion.
+
+\newpage
+\thispagestyle{empty}
+\setlength{\topmargin}{-2.0cm}
+\setlength{\headsep}{0.0cm}
+  
+\item[{\bf Q3.[Latex+pdf]}] Answer these questions the more complete you can.
+  \begin{itemize}
+  \item Suppose you build a binary classifier that answers \textit{yes} on every possible
+  input. What precision and recall will this classifier achieve?
+  \item Explain what precision and recall are. How do they relate to the ROC curve?
+  \item Is it better to have too many false positives, or too many false negatives? Explain.
+  \item What is cross-validation? How might we pick the right value of $k$ for $k$-fold cross-validation?
+  \item Explain why we have training, test, and validation data sets and how they are used effectively?
+  \item Explain why we need so many performance measures for a classifier (precision, recall, F1, accuracy etc)
+    and how they are used in practice?
+  \end{itemize}  
+  %
+%
+\item[{\bf Q4.[Latex+pdf]}] Search your favorite News Websites until you find four 
+  interesting charts/plots, ideally half good and half bad. For each, critique along the
+  following dimensions, using the vocabulary  we have developed in
+  this discipline:
+  \begin{itemize}
+  \item Does it go a good job or a bad job presenting the data?
+  \item Does the presentation appear to be biased, either
+  deliberately or accidentally?
+  \item Are the axes labeled in a clear and informative way?
+  \item Is the color used effectively?
+  \item How can we make the graphic better?
+  \end{itemize}
+  %
+\item[{\bf Q5.[Latex+pdf]}] Read the paper: ``Model Cards for Model Reporting''
+  by  Margaret Mitchell et. al., and write an abstract no less than one page,
+  longer than two pages. Your abstract should have a general idea of the paper,
+  the main argument, methods and conclusions. Besides that, you should include
+  \textbf{your critical analysis of the method}, that is, you should point the
+  positive aspects of the study (avoid personal opinions and distinguish your thoughts
+  from the authors's words), point the limitations of the study as, for instance:
+  do the amount of data support the conclusions?; What questions remain unanswered?;
+  How could future studies be improved?; etc.
+%  
+\item[{\bf Q6.[Latex+pdf]}] Read the paper: ``Understanding the Effect of Accuracy on Trust in
+  Machine Learning Models'' by Ming Yin et. al., and write an abstract no less than
+  one page, longer than two pages. Your abstract should have a general idea of the paper,
+  the main argument, methods and \textbf{your critical analysis of the method},
+  that is, you should point the  positive aspects of the study (avoid personal opinions and distinguish your thoughts
+  from the authors's words), point the limitations of the study as, for instance:
+  do the amount of data support the conclusions?; What questions remain unanswered?;
+  How could future studies be improved?; etc.
+  
+\newpage
+\thispagestyle{empty}
+\setlength{\topmargin}{-2.0cm}
+\setlength{\headsep}{0.0cm}
+\item[{\bf Q7.[Latex+pdf]}] Auto-avaliação
+\begin{enumerate}
+\item Você assistiu a todas as aulas online? Se não, o que a/o fez não assistir?
+%\vspace{2.0cm}
+\item Como você avalia seu entendimento das aulas ao conteúdo? O fato das aulas serem online afetaram seu entendimento positiva, ou negativamente?
+%\vspace{2.0cm}
+\item Você participou das tarefas em grupo realizadas em sala de aulas?  Se não, o que a/o fez não participar? Como você avalia a sua participação nas discussões do grupo? Como você avalia a ferramenta (discord) utilizada para as interações?
+%\vspace{2.0cm}
+\item Você procurou conhecer mais profundamente algum método exposto em aulas? Lembra quais? 
+Qual a sua avaliação, em termos de entendimento, desse seu estudo?
+%\vspace{2.0cm}
+\item Quantas horas por semana você tem para estudar extra-classe? Dessas horas, quantas você 
+usou para acompanhar esta disciplina?
+%\vspace{1.0cm}
+\item Você teve motivação para vir às aulas e participar das discussões? Se sim, o que aumentaria 
+ainda mais sua motivação? Se não, o que você sugere para que as aulas sejam motivadoras?
+%\vspace{2.0cm}
+\item A disciplina satisfez suas expectativas? Faça uma análise crítica dos objetivos
+  pretendidos por você ao se matricular e dos objetivos que você alcançou. 
+%\vspace{2.0cm}
+\item Além do que foi dado, o que mais você gostaria de aprender? Existe algum tópico você gostaria 
+que fosse aprofundado?
+%\newpage
+\item A quantidade e a dificuldade das tarefas práticas foi adequada e suficiente? Você
+  sente-se seguro para continuar estudando o assunto sozinho? O que poderia ser melhorado nas 
+tarefas? Avalie cada uma das tarefas.
+%\vspace{3.0cm}
+\item Faça uma breve auto-avaliação de seu desempenho considerando sua 
+         facilidade com o conteúdo da disciplina, seu entendimento dos 
+         conceitos, sua assiduidade às aulas, sua
+         participação em aulas e seu desempenho nas tarefas. Se você se
+         sentir confortável para isso, atribua-se uma nota de 0 a 10
+         de acordo com sua auto-avaliação. Essa nota será considerada
+         no cômputo final da sua nota, caso o professor entenda que
+         você soube se auto-avaliar.
+\end{enumerate}
+\end{itemize}
+\end{document}

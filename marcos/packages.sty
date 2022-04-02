@@ -1,0 +1,57 @@
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage{subfiles}
+\usepackage{color}
+\usepackage{textcomp}
+\geometry{verbose,a4paper,left=3cm,top=3cm,right=2cm,bottom=2cm}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=false,
+    linktoc=all,
+}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows}
+\usetikzlibrary{matrix, fit}
+
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage{graphicx}
+\graphicspath{{./img/}}
+\def\input@path{{./img/}}
+
+\DeclarePairedDelimiter\ceil{\left\lceil}{\right\rceil}
+\DeclarePairedDelimiter\floor{\left\lfloor}{\right\rfloor}
+
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\grad}{\bigtriangledown}
+\newcommand{\pderiv}[2]{\dfrac{\partial #1}{\partial#2}}
+\newcommand{\segderiv}[3]{\dfrac{\partial^2 #1}{\partial#2 \partial #3}}
+\newcommand{\derivquad}[2]{\dfrac{\partial^2 #1}{\partial#2^2}}
+\newcommand{\deriv}[2]{\dfrac{d #1}{d#2}}
+\newcommand{\defeq}{\vcentcolon=}
+\newcommand{\Sum}{\displaystyle \sum}
+\newcommand{\Int}{\displaystyle \int}
+\newcommand{\lk}{\left\{}
+\newcommand{\rk}{\right\}}
+\newcommand{\Lim}[1]{\raisebox{0.5ex}{\scalebox{1}{$\displaystyle \lim_{#1}\;$}}}
+
+\newtheorem{mydef}{Definição}
+\newtheorem{prop}{Proposição}
+\newtheorem{corol}{Corolário}
+\newtheorem{teor}{Teorema}
+\newtheorem*{exam*}{Exemplo}
+\newtheorem{exc}{Exercício}
+\newtheorem*{demo*}{Demonstração}
+\newtheorem*{nota}{Notação}
+
+\sloppy
